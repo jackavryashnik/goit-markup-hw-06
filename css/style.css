@@ -813,3 +813,89 @@ textarea {
 
 /* =========== MEDIA QUERIES =========== */
 
+@media (max-width: 768px) {
+  .section {
+    padding: 96px 0;
+  }
+
+  .container {
+    max-width: 768px; 
+    padding: 0 16px; 
+  }
+
+  .header__nav {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    font-size: 18px;
+    margin-right: 120px;
+  }
+
+  .header__contacts-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts-list__item,
+  .header__contacts-item {
+    font-size: 12px;
+    padding: 0;
+    line-height: 117%;
+  }
+
+  .hero-section {
+    max-width: 768px;
+  }
+
+  .about-sectioon__container {
+    display: none;
+  }
+
+  .about-section__list {
+    gap: 72px 24px;
+  }
+
+  .about-section__item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .about-section__item .item-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 111%;
+    letter-spacing: 0.72px;
+  }
+
+  .about-section__item .item__description {
+    font-weight: 500;
+  }
+
+  .our-team-container {
+    padding: 0 108px;
+  }
+
+  .our-team__list .list__item,
+  .portfolio__list .list__item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .footer {
+    padding: 96px 0;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    padding-left: 108px;
+  }
+
+  .footer__company-slogan,
+  .footer__social {
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  
+}
