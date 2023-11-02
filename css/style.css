@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap');
-
 :root {
   --primary-brand: #4d5ae5;
   --pressed-state: #404bbf;
   --dark: #2e2f42;
   --success: #31d0aa;
-  --taxt: #434455;
+  --text: #434455;
   --subtle-taxt: #8e8f99;
   --accent: #e7e9fc;
   --light: #f4f4fd;
@@ -14,6 +12,8 @@
   --white: #ffffff;
   --modal-background: #fcfcfc;
 }
+
+/* =========== COMMON STILES =========== */
 
 * {
   box-sizing: border-box;
@@ -28,7 +28,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  background-color: var(--white);
+  background-color: var(--white, #ffffff);
   color: #434455;
 }
 
@@ -108,6 +108,8 @@ textarea {
   resize: none;
 }
 
+/* =========== REUSABLE STILES =========== */
+
 .section {
   padding: 120px 0;
   margin-right: auto;
@@ -119,6 +121,32 @@ textarea {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.social-links__item {
+  width: 40px;
+  height: 40px;
+}
+
+.item-container {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* =========== HEADER STILES =========== */
 
 .header {
   border-bottom: 1px solid #e7e9fc;
@@ -156,7 +184,6 @@ textarea {
   margin-right: 76px;
 }
 
-.footer__logo span,
 .header__logo span {
   color: #2e2f42;
 }
@@ -210,12 +237,6 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-list__item:hover .header__contacts-item,
-.header__link:hover,
-.header__link:focus {
-  color: #404bbf;
-}
-
 .header__link::after {
   content: '';
   display: block;
@@ -227,10 +248,13 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header__link:hover,
+.header__link:focus,
 .header__link:hover::after,
 .header__link:focus::after,
 .header__logo:hover::after,
-.header__logo:focus::after {
+.header__logo:focus::after,
+.contacts-list__item:hover .header__contacts-item {
   background: #404bbf;
 }
 
@@ -246,6 +270,8 @@ textarea {
   font-weight: 400;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* =========== HERO STILES =========== */
 
 .hero-section {
   display: flex;
@@ -270,7 +296,7 @@ textarea {
 }
 
 .hero-section__btn {
-  cursor: pointer;
+  display: block;
   margin: 0 auto;
   padding: 16px 32px;
   color: var(--white);
@@ -286,6 +312,8 @@ textarea {
 .hero-section__btn:hover {
   background-color: #404bbf;
 }
+
+/* =========== ABOUT STILES =========== */
 
 .about-section {
   display: flex;
@@ -304,20 +332,6 @@ textarea {
   height: 112px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .about-section__list {
   display: flex;
   flex-wrap: wrap;
@@ -330,6 +344,8 @@ textarea {
   flex-direction: column;
   width: calc((100% - 72px) / 4);
 }
+
+/* =========== OUR TEAM STILES =========== */
 
 .our-team {
   background-color: var(--light);
@@ -375,37 +391,6 @@ textarea {
   gap: 24px;
 }
 
-.social-links__item {
-  width: 40px;
-  height: 40px;
-}
-
-.item-container {
-  padding: 32px 0;
-  text-align: center;
-}
-
-.portfolio .item-container {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
-
-.item-title {
-  margin-bottom: 8px;
-}
-
-.item-description {
-  color: #434455;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.item__description {
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
 .employee__social-link {
   width: 100%;
   height: 100%;
@@ -424,6 +409,30 @@ textarea {
 
 .employee__social-link-icon {
   fill: #f4f4fd;
+}
+
+/* =========== PORTFOLIO STILES =========== */
+
+.portfolio .item-container {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  text-align: start;
+}
+
+.item-title {
+  margin-bottom: 8px;
+}
+
+.item-description {
+  color: #434455;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.item__description {
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
 .portfolio__list {
@@ -462,9 +471,7 @@ textarea {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__list .item-container {
-  text-align: start;
-}
+/* =========== FOOTER STILES =========== */
 
 .footer {
   padding: 100px 0;
@@ -537,7 +544,7 @@ textarea {
 
 .footer__social-link:hover,
 .footer__social-link:focus {
-  background-color: #31d0aa;
+  background-color: var(--success, #31d0aa);
 }
 
 .footer__social-link-icon {
@@ -582,11 +589,7 @@ textarea {
   fill: #fff;
 }
 
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* =========== MODAL STILES =========== */
 
 .modal-overlay {
   display: none;
@@ -733,12 +736,6 @@ textarea {
   width: 167px;
 }
 
-/* .checkbox-container {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
 .privacy-container {
   margin: 0 0 24px;
 }
@@ -813,3 +810,6 @@ textarea {
 .form-textarea:focus {
   border-color: #4d5ae5;
 }
+
+/* =========== MEDIA QUERIES =========== */
+
