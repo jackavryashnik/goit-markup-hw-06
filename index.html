@@ -26,7 +26,7 @@
           <a href="./index.html" class="header__logo">Web<span class="logo-span">Studio</span></a>
           <ul class="header__list">
             <li class="header__list-item">
-              <a href="./index.html" class="header__link">Studio</a>
+              <a href="#" class="header__link">Studio</a>
             </li>
             <li class="header__list-item">
               <a href="#" class="header__link">Portfolio</a>
@@ -35,6 +35,11 @@
               <a href="#" class="header__link">Contacts</a>
             </li>
           </ul>
+          <button class="menu-btn">
+            <svg class="about-section__icon" width="24" height="24">
+              <use href="./images/icons.svg#menu-icon"></use>
+            </svg>
+          </button>
         </nav>
 
         <address class="header__contacts">
@@ -455,7 +460,76 @@
       </div>
     </footer>
 
-    <div class="modal-overlay "is-open>
+    <div class="hamburger-menu-modal is-open visually-hidden">
+      <button type="button" class="close-btn">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a href="./index.html" class="header__link">Studio</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#" class="header__link">Portfolio</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#" class="header__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu__contacts">
+        <address class="header__contacts">
+          <ul class="header__contacts-list">
+            <li class="contacts-list__item">
+              <a class="header__contacts-item accent-color" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="contacts-list__item">
+              <a class="header__contacts-item" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="footer__social">
+          <ul class="footer__social-links">
+            <li class="footer__social-links-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-links-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#twitter-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-links-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-links-item">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#linkedin-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay is-open visually-hidden">
       <div class="modal-wrapper">
         <button type="button" class="close-btn">
           <svg class="close-icon" width="8" height="8">
