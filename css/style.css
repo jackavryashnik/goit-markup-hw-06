@@ -286,7 +286,7 @@ textarea {
 /* =========== HAMBUGER MENU STILES =========== */
 
 .hamburger-menu-modal {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
@@ -1083,5 +1083,12 @@ textarea {
 
   .footer__social {
     margin-right: 80px;
+  }
+}
+
+@media (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero-bg@2x.jpg);
   }
 }
