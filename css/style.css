@@ -83,7 +83,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  min-width: 100%;
 }
 
 ul,
@@ -358,7 +358,7 @@ textarea {
   position: relative;
   flex-direction: column;
   align-items: center;
-  padding: 188px 0;
+  padding: 72px 0;
   max-width: 1440px;
   background-color: var(--dark);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -372,7 +372,7 @@ textarea {
   color: var(--white);
   text-align: center;
   max-width: 496px;
-  margin: 0 auto 48px;
+  margin: 0 auto 72px;
 }
 
 .hero-section__btn {
@@ -452,7 +452,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 72px 24px;
 }
 
 .social-links__item {
@@ -561,6 +561,11 @@ textarea {
 .portfolio__list .list__item {
   width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__list img {
+  width: 288px;
+  height: 280px;
 }
 
 /* =========== FOOTER STILES =========== */
@@ -963,6 +968,14 @@ textarea {
     display: flex;
   }
 
+  .hero-section {
+    padding: 112px 0;
+  }
+
+  .hero-section__title {
+    margin-bottom: 36px;
+  }
+
   .about-section__list {
     flex-direction: row;
     gap: 72px 24px;
@@ -976,12 +989,21 @@ textarea {
     text-align: left;
   }
 
+  .our-team__list {
+    gap: 64px 24px;
+  }
+
   .portfolio__list {
     gap: 72px 24px;
   }
 
   .portfolio__list .list__item {
     width: 356px;
+  }
+
+  .portfolio__list img {
+    width: 356px;
+    height: 300px;
   }
 
   .footer {
@@ -1007,6 +1029,7 @@ textarea {
 
   .footer-form {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
@@ -1041,6 +1064,11 @@ textarea {
 
   .hero-section {
     max-width: 1440px;
+    padding: 188px 0;
+  }
+
+  .hero-section__title {
+    margin-bottom: 48px;
   }
 
   .about-section__list {
@@ -1073,8 +1101,15 @@ textarea {
     width: 360px;
   }
 
+  .portfolio__list img {
+    width: 360px;
+    height: 300px;
+  }
+
   .footer-container {
     justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
   }
 
   .footer__company-slogan {
