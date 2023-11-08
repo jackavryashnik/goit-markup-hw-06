@@ -266,9 +266,12 @@ textarea {
 .header__link:hover::after,
 .header__link:focus::after,
 .header__logo:hover::after,
-.header__logo:focus::after,
-.contacts-list__item:hover .header__contacts-item {
+.header__logo:focus::after {
   background: #404bbf;
+}
+
+.contacts-list__item:hover .header__contacts-item {
+  color: #404bbf;
 }
 
 .header-container .header__contacts {
@@ -935,7 +938,7 @@ textarea {
     gap: 40px;
   }
 
-  .header__contacts {
+  .header-container .header__contacts {
     display: block;
   }
 
@@ -1046,7 +1049,7 @@ textarea {
   }
 
   .header-container {
-    padding: 0 156px;
+    max-width: 1440px;
   }
 
   .header__contacts-list {
